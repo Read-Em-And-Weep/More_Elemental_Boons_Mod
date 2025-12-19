@@ -8,6 +8,6 @@
 # For build artifacts created by the Thunderstore CLI
 /build
 
-
+manifest.json
 # For the Thunderstore CLI executable itself, if you include it in your root folder
 tcli.exe
