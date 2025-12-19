@@ -5,7 +5,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "ReadEmAndWeep"
 name = "More_Elemental_Boons_Mod"
-versionNumber = "1.0.0"
+versionNumber = "1.0.1"
 description = "Adds new infusion boons for the gods that didn't get any."
 website_url = "https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod"
 containsNsfwContent = false
