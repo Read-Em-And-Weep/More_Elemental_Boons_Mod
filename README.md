@@ -10,10 +10,10 @@
 Have three of all standard elements and gain access to an additional cast to decimate your foes!
 
 ## Strategic Quake/Flare/Flood/Gale (Athena)
-While Earth/Fire/Water/Air is the element you have the most of, deal +25% damage!
+While you have more Earth/Fire/Water/Air than any other element, deal +25% damage!
 
 ## Exclusive Vintage (Dionysus)
-Once you gain at least seven of any element, upgrade all of your Olympian infusion boons into more effective versions (+50% potency!)
+Once you gain at least seven of any element, upgrade all of your Olympian infusion boons into more effective versions (+50% potency)!
 
 ## Loyalty of the Dead (Hades)
 For every element you have more than 8 of, revive a foe after killing it and have it aid you in the fight!
