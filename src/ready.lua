@@ -179,3 +179,30 @@ sjson.hook(traitTextFile, function(data)
   end
 end)
 
+for enemyName, enemyData in pairs( EnemyData ) do
+		enemyData.Name = enemyName
+		ProcessDataInheritance( enemyData, EnemyData )
+		if enemyData.TreatAsGodLootByShops and not IsEmpty( enemyData.Traits ) then
+			FieldLootData[enemyData.Name] = 
+				{ 
+					Name = enemyData.Name,
+					TraitIndex = ToLookup(enemyData.Traits),
+					TreatAsGodLootByShops = enemyData.TreatAsGodLootByShops,
+					IgnoreRestrictBoonChoices = enemyData.IgnoreRestrictBoonChoices,
+					ExcludeFromLastRunBoon = enemyData.ExcludeFromLastRunBoon,
+					GodLoot = enemyData.GodLoot,
+				}
+		end
+
+		if enemyData.Traits ~= nil then
+			ScreenData.BoonInfo.TraitDictionary[enemyData.Name] = {}
+			for i, traitName in pairs( enemyData.Traits ) do
+				ScreenData.BoonInfo.TraitDictionary[enemyData.Name][traitName] = true
+			end
+			ScreenData.BoonInfo.TraitSortOrder[enemyData.Name] = {}
+			ScreenData.BoonInfo.TraitSortOrder[enemyData.Name] = ConcatTableValuesIPairs( ScreenData.BoonInfo.TraitSortOrder[enemyData.Name], enemyData.Traits )
+		end
+
+	end
+
+  
