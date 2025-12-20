@@ -18,9 +18,9 @@ function mod.addAthenaBoons()
             GameStateRequirements =
             {
                 {
-                    Path = { "CurrentRun", "Hero", "Elements", "Fire" },
-                    Comparison = ">=",
-                    Value = 5,
+                    Path = { "CurrentRun", "Hero", "ExtraElementalBoonsDominantElementByCount" },
+                    Comparison = "==",
+                    Value = "Fire",
                 },
             },
             ActivationRequirements =
@@ -78,9 +78,9 @@ function mod.addAthenaBoons()
             GameStateRequirements =
             {
                 {
-                    Path = { "CurrentRun", "Hero", "Elements", "Earth" },
-                    Comparison = ">=",
-                    Value = 5,
+                    Path = { "CurrentRun", "Hero", "ExtraElementalBoonsDominantElementByCount" },
+                    Comparison = "==",
+                    Value = "Earth",
                 },
             },
             ActivationRequirements =
@@ -138,9 +138,9 @@ function mod.addAthenaBoons()
             GameStateRequirements =
             {
                {
-                    Path = { "CurrentRun", "Hero", "Elements", "Air" },
-                    Comparison = ">=",
-                    Value = 5,
+                    Path = { "CurrentRun", "Hero", "ExtraElementalBoonsDominantElementByCount" },
+                    Comparison = "==",
+                    Value = "Air",
                 },
             },
             ActivationRequirements =
@@ -198,9 +198,9 @@ function mod.addAthenaBoons()
             GameStateRequirements =
             {
                 {
-                    Path = { "CurrentRun", "Hero", "Elements", "Water" },
-                    Comparison = ">=",
-                    Value = 5,
+                    Path = { "CurrentRun", "Hero", "ExtraElementalBoonsDominantElementByCount" },
+                    Comparison = "==",
+                    Value = "Water",
                 },
             },           
             ActivationRequirements =
@@ -252,7 +252,7 @@ mod.addAthenaBoons()
 modutil.mod.Path.Wrap("UpdateHeroTraitDictionary", function(base, source, args)
     base(source, args)
     CurrentRun.Hero.ExtraElementalBoonsDominantElementByCount = nil
-    CurrentElementHighestCount = 0
+    local CurrentElementHighestCount = 0
     for element, count in pairs(CurrentRun.Hero.Elements) do
         if count == CurrentElementHighestCount then
             CurrentRun.Hero.ExtraElementalBoonsDominantElementByCount = nil
@@ -261,4 +261,42 @@ modutil.mod.Path.Wrap("UpdateHeroTraitDictionary", function(base, source, args)
             CurrentElementHighestCount = count
         end
     end
+end)
+
+
+
+
+modutil.mod.Path.Wrap("IsGameStateEligible", function(base, source, requirements, args)
+    if (not source) or (not source.Name) then 
+        return base(source, requirements, args) 
+    end
+    if IsEmpty( requirements ) then
+        return true
+	end
+    if source.Name == "ElementalWaterDominanceBoon" then
+        if CurrentRun.Hero.ExtraElementalBoonsDominantElementByCount == "Water" then
+            return true
+        else
+            return false
+        end
+    elseif source.Name == "ElementalFireDominanceBoon" then
+        if CurrentRun.Hero.ExtraElementalBoonsDominantElementByCount == "Fire" then
+            return true
+        else
+            return false
+        end
+    elseif source.Name == "ElementalEarthDominanceBoon" then
+        if CurrentRun.Hero.ExtraElementalBoonsDominantElementByCount == "Earth" then
+            return true
+        else
+            return false
+        end
+    elseif source.Name == "ElementalAirDominanceBoon" then
+        if CurrentRun.Hero.ExtraElementalBoonsDominantElementByCount == "Air" then
+            return true
+        else
+            return false
+        end
+    end
+    return base(source, requirements, args)
 end)
