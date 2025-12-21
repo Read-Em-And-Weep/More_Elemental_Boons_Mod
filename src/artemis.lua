@@ -140,3 +140,13 @@ sjson.hook(HadesCastFixFile, function(data)
 end)
 
 mod.addArtemisBoons()
+
+modutil.mod.Path.Wrap("DemeterCastBlast", function(base, weaponData, traitArgs, triggerArgs )
+    if HeroHasTrait("ElementalExtraCastBoon") then
+        traitArgs.MaxProjectiles = (traitArgs.MaxProjectiles + 1 ) or 2
+    end
+    if HeroHasTrait("ImprovedElementalExtraCastBoon") then
+        traitArgs.MaxProjectiles = (traitArgs.MaxProjectiles + 2 ) or 3
+    end
+    base(weaponData, traitArgs, triggerArgs)
+end)
