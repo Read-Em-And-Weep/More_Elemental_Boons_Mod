@@ -4,7 +4,7 @@
 
 ## Features
 
-- Adds new infusions boons!
+- Adds new infusions boons! Each one can individually be toggled off in the config file.
 
 ## Loaded Quiver (Artemis)
 Have three of all standard elements and gain access to an additional cast to decimate your foes!
