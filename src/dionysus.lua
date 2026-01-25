@@ -1170,7 +1170,7 @@ function mod.AddDionysusBoons()
         { "ElementalAirDominanceBoon", "ImprovedElementalAirDominanceBoon" }, { "ElementalWaterDominanceBoon", "ImprovedElementalWaterDominanceBoon" },
         { "ElementalExtraCastBoon",    "ImprovedElementalExtraCastBoon" } }
         for k, v in pairs(originalTraits) do
-            game.OverwriteTableKeys(game.TraitData[v[1]].GameStateRequirements, {{Path = { "CurrentRun", "Hero", "TraitDictionary", }, HasNone = {v[2]},}})
+            table.insert(game.TraitData[v[1]].GameStateRequirements, {Path = { "CurrentRun", "Hero", "TraitDictionary", }, HasNone = {v[2]},})
         end
 end
 
