@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.6] - 2026-01-25
+
 - Fixed issue that meant that requirements for infusions were deleted. They should be appearing with the proper requirements now!
 
 ## [1.0.5] - 2025-12-21
@@ -26,7 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First version of the mod!
 
-[unreleased]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.5...HEAD
+[unreleased]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.6...HEAD
+[1.0.6]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.5...1.0.6
 [1.0.5]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.4...1.0.5
 [1.0.4]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.3...1.0.4
 [1.0.3]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.1...1.0.3
