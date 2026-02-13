@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.7] - 2026-02-13
+
 - Changed requirements for Dionysus boon spawning (now requires at least one other infusion boon)
 - Hopefully fixed a crash (maybe?)
 
@@ -32,7 +34,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First version of the mod!
 
-[unreleased]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.6...HEAD
+[unreleased]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.7...HEAD
+[1.0.7]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.6...1.0.7
 [1.0.6]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.5...1.0.6
 [1.0.5]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.4...1.0.5
 [1.0.4]: https://github.com/Read-Em-And-Weep/More_Elemental_Boons_Mod/compare/1.0.3...1.0.4
