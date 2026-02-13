@@ -1123,6 +1123,27 @@ function mod.AddDionysusBoons()
                     Comparison = ">=",
                     Value = 1,
                 },
+                {
+                    Path = { "CurrentRun", "Hero", "TraitDictionary" },
+				HasAny = 
+				{
+					"ElementalUnifiedBoon",
+                    "ElementalRarityUpgradeBoon",
+                    "ElementalDamageBoon",
+                    "ElementalOlympianDamageBoon",
+                    "ElementalBaseDamageBoon",
+                    "ElementalRallyBoon",
+                    "ElementalDamageFloorBoon",
+                    "ElementalDodgeBoon",
+                    "ElementalDamageCapBoon",
+                    "ElementalHealthBoon",
+                    "ElementalExtraCastBoon",
+                    "ElementalAirDominanceBoon",
+                    "ElementalFireDominanceBoon",
+                    "ElementalEarthDominanceBoon",
+                    "ElementalWaterDominanceBoon",
+				},
+                }
             },
             ActivationRequirements =
             {
